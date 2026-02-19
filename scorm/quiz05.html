@@ -15,211 +15,104 @@
         </header>
 
         <main>
-            <form id="quizForm">
-                <!-- Question 1 -->
-                <div class="question">
-                    <p class="question-text">1. 地支六冲中，"子"与哪个地支相冲？</p>
-                    <div class="options">
-                        <label><input type="radio" name="q1" value="A"> A. 丑</label>
-                        <label><input type="radio" name="q1" value="B"> B. 午</label>
-                        <label><input type="radio" name="q1" value="C"> C. 卯</label>
-                        <label><input type="radio" name="q1" value="D"> D. 酉</label>
-                    </div>
-                </div>
+            <div id="quiz-container">
+                <!-- Quiz questions will be rendered here by QuizEngine -->
+            </div>
 
-                <!-- Question 2 -->
-                <div class="question">
-                    <p class="question-text">2. 地支三合局中，"申子辰"合成什么局？</p>
-                    <div class="options">
-                        <label><input type="radio" name="q2" value="A"> A. 火局</label>
-                        <label><input type="radio" name="q2" value="B"> B. 水局</label>
-                        <label><input type="radio" name="q2" value="C"> C. 木局</label>
-                        <label><input type="radio" name="q2" value="D"> D. 金局</label>
-                    </div>
-                </div>
-
-                <!-- Question 3 -->
-                <div class="question">
-                    <p class="question-text">3. 地支六合中，"子"与哪个地支相合？</p>
-                    <div class="options">
-                        <label><input type="radio" name="q3" value="A"> A. 午</label>
-                        <label><input type="radio" name="q3" value="B"> B. 丑</label>
-                        <label><input type="radio" name="q3" value="C"> C. 亥</label>
-                        <label><input type="radio" name="q3" value="D"> D. 未</label>
-                    </div>
-                </div>
-
-                <!-- Question 4 -->
-                <div class="question">
-                    <p class="question-text">4. "寅午戌"三合成什么局？</p>
-                    <div class="options">
-                        <label><input type="radio" name="q4" value="A"> A. 木局</label>
-                        <label><input type="radio" name="q4" value="B"> B. 火局</label>
-                        <label><input type="radio" name="q4" value="C"> C. 土局</label>
-                        <label><input type="radio" name="q4" value="D"> D. 金局</label>
-                    </div>
-                </div>
-
-                <!-- Question 5 -->
-                <div class="question">
-                    <p class="question-text">5. 地支六害中，"子未相害"的主要原因是什么？</p>
-                    <div class="options">
-                        <label><input type="radio" name="q5" value="A"> A. 方位对冲</label>
-                        <label><input type="radio" name="q5" value="B"> B. 子与丑合，未冲丑而害子</label>
-                        <label><input type="radio" name="q5" value="C"> C. 五行相克</label>
-                        <label><input type="radio" name="q5" value="D"> D. 阴阳不和</label>
-                    </div>
-                </div>
-
-                <!-- Question 6 -->
-                <div class="question">
-                    <p class="question-text">6. 地支相刑中，"寅巳申"属于什么刑？</p>
-                    <div class="options">
-                        <label><input type="radio" name="q6" value="A"> A. 无恩之刑</label>
-                        <label><input type="radio" name="q6" value="B"> B. 无礼之刑</label>
-                        <label><input type="radio" name="q6" value="C"> C. 恩将仇报之刑</label>
-                        <label><input type="radio" name="q6" value="D"> D. 自刑</label>
-                    </div>
-                </div>
-
-                <!-- Question 7 -->
-                <div class="question">
-                    <p class="question-text">7. "卯酉相冲"的主要特点是什么？</p>
-                    <div class="options">
-                        <label><input type="radio" name="q7" value="A"> A. 水火不容</label>
-                        <label><input type="radio" name="q7" value="B"> B. 东西对冲，金木相战</label>
-                        <label><input type="radio" name="q7" value="C"> C. 南北对冲</label>
-                        <label><input type="radio" name="q7" value="D"> D. 土气相克</label>
-                    </div>
-                </div>
-
-                <!-- Question 8 -->
-                <div class="question">
-                    <p class="question-text">8. "丑未戌"三刑属于什么刑？</p>
-                    <div class="options">
-                        <label><input type="radio" name="q8" value="A"> A. 恩将仇报之刑</label>
-                        <label><input type="radio" name="q8" value="B"> B. 无礼之刑</label>
-                        <label><input type="radio" name="q8" value="C"> C. 无恩之刑</label>
-                        <label><input type="radio" name="q8" value="D"> D. 持势之刑</label>
-                    </div>
-                </div>
-
-                <!-- Question 9 (True/False) -->
-                <div class="question">
-                    <p class="question-text">9. 地支三合局必须三个地支全部出现才能成局，缺一不可。</p>
-                    <div class="options">
-                        <label><input type="radio" name="q9" value="true"> 正确</label>
-                        <label><input type="radio" name="q9" value="false"> 错误</label>
-                    </div>
-                </div>
-
-                <!-- Question 10 (True/False) -->
-                <div class="question">
-                    <p class="question-text">10. 地支相冲会导致地支所代表的人、事、物发生变动、损伤或分离。</p>
-                    <div class="options">
-                        <label><input type="radio" name="q10" value="true"> 正确</label>
-                        <label><input type="radio" name="q10" value="false"> 错误</label>
-                    </div>
-                </div>
-            </form>
-
-            <div id="results" class="results"></div>
+            <div id="quiz-results" style="display: none;">
+                <!-- Results will be rendered here by QuizEngine -->
+            </div>
 
             <div class="button-group">
-                <button id="submitBtn" class="btn btn-primary">提交答案</button>
-                <button id="resetBtn" class="btn btn-secondary">重新测验</button>
-                <button id="nextBtn" class="btn btn-success" style="display:none;">下一章节</button>
+                <button class="btn btn-primary" onclick="QuizEngine.submit()">提交答案</button>
+                <button class="btn btn-secondary" onclick="QuizEngine.reset()">重新作答</button>
+                <a href="module06.html" class="btn btn-success">下一章</a>
             </div>
         </main>
     </div>
 
     <script>
-        // Quiz answers
-        const answers = {
-            q1: 'B',
-            q2: 'B',
-            q3: 'B',
-            q4: 'B',
-            q5: 'B',
-            q6: 'A',
-            q7: 'B',
-            q8: 'D',
-            q9: 'false',
-            q10: 'true'
-        };
+        // Quiz questions array
+        const quizQuestions = [
+            {
+                question: '地支六冲中，"子"与哪个地支相冲？',
+                options: ["丑", "午", "卯", "酉"],
+                correct: 1,
+                explanation: "子午相冲，属于六冲之一。子为正北水，午为正南火，方位对冲，水火相战。"
+            },
+            {
+                question: '地支三合局中，"申子辰"合成什么局？',
+                options: ["火局", "水局", "木局", "金局"],
+                correct: 1,
+                explanation: "申子辰三合水局。申为水的长生，子为水的帝旺，辰为水的墓库。"
+            },
+            {
+                question: '地支六合中，"子"与哪个地支相合？',
+                options: ["午", "丑", "亥", "未"],
+                correct: 1,
+                explanation: "子丑合化土，属于地支六合之一。"
+            },
+            {
+                question: '"寅午戌"三合成什么局？',
+                options: ["木局", "火局", "土局", "金局"],
+                correct: 1,
+                explanation: "寅午戌三合火局。寅为火的长生，午为火的帝旺，戌为火的墓库。"
+            },
+            {
+                question: '地支六害中，"子未相害"的主要原因是什么？',
+                options: ["方位对冲", "子与丑合，未冲丑而害子", "五行相克", "阴阳不和"],
+                correct: 1,
+                explanation: "子未相害是因为子与丑合，而未冲丑，破坏了子丑合，所以子未相害。"
+            },
+            {
+                question: '地支相刑中，"寅巳申"属于什么刑？',
+                options: ["无恩之刑", "无礼之刑", "恩将仇报之刑", "自刑"],
+                correct: 0,
+                explanation: "寅巳申为无恩之刑（或称持势之刑），三者循环相刑。"
+            },
+            {
+                question: '"卯酉相冲"的主要特点是什么？',
+                options: ["水火不容", "东西对冲，金木相战", "南北对冲", "土气相克"],
+                correct: 1,
+                explanation: "卯酉相冲是东西对冲，卯木（正东）与酉金（正西）相冲，金克木。"
+            },
+            {
+                question: '"丑未戌"三刑属于什么刑？',
+                options: ["恩将仇报之刑", "无礼之刑", "无恩之刑", "持势之刑"],
+                correct: 3,
+                explanation: "辰、戌、丑、未四土相刑，称为持势之刑（或称四库之刑）。"
+            },
+            {
+                question: "地支三合局必须三个地支全部出现才能成局，缺一不可。",
+                options: ["正确", "错误"],
+                correct: 1,
+                explanation: "错误。地支三合局可以有三个全部出现（三合全），也可以只有两个（半合局），半合也有一定力量。"
+            },
+            {
+                question: "地支相冲会导致地支所代表的人、事、物发生变动、损伤或分离。",
+                options: ["正确", "错误"],
+                correct: 0,
+                explanation: "正确。地支相冲代表冲突、变动、损伤或分离，影响地支所代表的六亲、宫位等。"
+            }
+        ];
 
-        // Initialize quiz engine
-        const quiz = new QuizEngine('quiz05', answers);
-
-        // Submit button handler
-        document.getElementById('submitBtn').addEventListener('click', function() {
-            const form = document.getElementById('quizForm');
-            const userAnswers = {};
-            
-            // Collect user answers
-            for (let key in answers) {
-                const selected = form.querySelector(`input[name="${key}"]:checked`);
-                if (selected) {
-                    userAnswers[key] = selected.value;
-                }
+        // Initialize QuizEngine when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize SCORM
+            if (typeof scormAPI !== 'undefined') {
+                scormAPI.initialize();
+                scormAPI.setLessonLocation('quiz05');
             }
 
-            // Grade the quiz
-            const result = quiz.grade(userAnswers);
-            
-            // Display results
-            const resultsDiv = document.getElementById('results');
-            resultsDiv.innerHTML = `
-                <h2>测验结果</h2>
-                <p class="score">得分: ${result.score}/${result.total} (${result.percentage}%)</p>
-                <p class="status ${result.passed ? 'pass' : 'fail'}">
-                    ${result.passed ? '✓ 通过测验！' : '✗ 未通过，请重新学习后再次测验。'}
-                </p>
-            `;
-            resultsDiv.style.display = 'block';
-
-            // Show/hide buttons based on result
-            if (result.passed) {
-                document.getElementById('nextBtn').style.display = 'inline-block';
-            }
-
-            // Disable form
-            const inputs = form.querySelectorAll('input');
-            inputs.forEach(input => input.disabled = true);
-            this.disabled = true;
+            // Initialize Quiz
+            QuizEngine.init(quizQuestions);
         });
 
-        // Reset button handler
-        document.getElementById('resetBtn').addEventListener('click', function() {
-            const form = document.getElementById('quizForm');
-            form.reset();
-            
-            // Enable form
-            const inputs = form.querySelectorAll('input');
-            inputs.forEach(input => input.disabled = false);
-            
-            // Hide results and next button
-            document.getElementById('results').style.display = 'none';
-            document.getElementById('nextBtn').style.display = 'none';
-            document.getElementById('submitBtn').disabled = false;
-
-            // Reset quiz tracking
-            quiz.reset();
-        });
-
-        // Next button handler
-        document.getElementById('nextBtn').addEventListener('click', function() {
-            window.location.href = 'module06.html';
-        });
-
-        // Initialize SCORM on page load
-        window.addEventListener('load', function() {
-            quiz.initialize();
-        });
-
-        // Complete SCORM session on page unload
+        // Handle page unload
         window.addEventListener('beforeunload', function() {
-            quiz.terminate();
+            if (typeof scormAPI !== 'undefined') {
+                scormAPI.terminate();
+            }
         });
     </script>
 </body>

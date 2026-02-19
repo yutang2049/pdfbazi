@@ -16,225 +16,104 @@
         </header>
 
         <main>
-            <form id="quizForm">
-                <!-- Question 1 -->
-                <div class="question">
-                    <h3>1. 某人四柱为：年柱甲子、月柱丙寅、日柱戊午、时柱壬戌。请问日柱地支午与年柱地支子之间是什么关系？</h3>
-                    <div class="options">
-                        <label><input type="radio" name="q1" value="A"> A. 六合</label>
-                        <label><input type="radio" name="q1" value="B"> B. 相冲</label>
-                        <label><input type="radio" name="q1" value="C"> C. 相刑</label>
-                        <label><input type="radio" name="q1" value="D"> D. 三合</label>
-                    </div>
-                </div>
+            <div id="quiz-container">
+                <!-- Quiz questions will be rendered here by QuizEngine -->
+            </div>
 
-                <!-- Question 2 -->
-                <div class="question">
-                    <h3>2. 在上述四柱中（甲子、丙寅、戊午、壬戌），寅午戌三个地支组合在一起形成什么局？</h3>
-                    <div class="options">
-                        <label><input type="radio" name="q2" value="A"> A. 三合水局</label>
-                        <label><input type="radio" name="q2" value="B"> B. 三合木局</label>
-                        <label><input type="radio" name="q2" value="C"> C. 三合火局</label>
-                        <label><input type="radio" name="q2" value="D"> D. 三合金局</label>
-                    </div>
-                </div>
-
-                <!-- Question 3 -->
-                <div class="question">
-                    <h3>3. 某女命四柱：年柱乙丑、月柱己卯、日柱辛未、时柱癸巳。日干辛金在卯月（木旺之时），此命格属于什么状态？</h3>
-                    <div class="options">
-                        <label><input type="radio" name="q3" value="A"> A. 身旺</label>
-                        <label><input type="radio" name="q3" value="B"> B. 身弱</label>
-                        <label><input type="radio" name="q3" value="C"> C. 从格</label>
-                        <label><input type="radio" name="q3" value="D"> D. 化格</label>
-                    </div>
-                </div>
-
-                <!-- Question 4 -->
-                <div class="question">
-                    <h3>4. 合盘分析中，男命日柱为庚申，女命日柱为乙酉。两人日柱天干庚乙之间存在什么关系？</h3>
-                    <div class="options">
-                        <label><input type="radio" name="q4" value="A"> A. 天干五合（金）</label>
-                        <label><input type="radio" name="q4" value="B"> B. 天干相冲</label>
-                        <label><input type="radio" name="q4" value="C"> C. 天干相克</label>
-                        <label><input type="radio" name="q4" value="D"> D. 天干相生</label>
-                    </div>
-                </div>
-
-                <!-- Question 5 -->
-                <div class="question">
-                    <h3>5. 某命四柱中出现：子、卯、午、酉四个地支。这四个地支组合形成什么格局？</h3>
-                    <div class="options">
-                        <label><input type="radio" name="q5" value="A"> A. 四正桃花</label>
-                        <label><input type="radio" name="q5" value="B"> B. 四库全</label>
-                        <label><input type="radio" name="q5" value="C"> C. 四生地</label>
-                        <label><input type="radio" name="q5" value="D"> D. 四败地</label>
-                    </div>
-                </div>
-
-                <!-- Question 6 -->
-                <div class="question">
-                    <h3>6. 实际命例分析：某男命四柱为丁卯、壬寅、甲午、丙寅。此命中寅木出现三次，日干甲木在寅月，木势很旺。此命最需要什么五行来调候？</h3>
-                    <div class="options">
-                        <label><input type="radio" name="q6" value="A"> A. 金（克木）</label>
-                        <label><input type="radio" name="q6" value="B"> B. 土（泄木）</label>
-                        <label><input type="radio" name="q6" value="C"> C. 水（生木）</label>
-                        <label><input type="radio" name="q6" value="D"> D. 火（木生火，泄木气）</label>
-                    </div>
-                </div>
-
-                <!-- Question 7 -->
-                <div class="question">
-                    <h3>7. 地支三刑中，寅巳申三刑又称为什么？</h3>
-                    <div class="options">
-                        <label><input type="radio" name="q7" value="A"> A. 无恩之刑</label>
-                        <label><input type="radio" name="q7" value="B"> B. 无礼之刑</label>
-                        <label><input type="radio" name="q7" value="C"> C. 持势之刑</label>
-                        <label><input type="radio" name="q7" value="D"> D. 自刑</label>
-                    </div>
-                </div>
-
-                <!-- Question 8 -->
-                <div class="question">
-                    <h3>8. 某命四柱：庚辰、戊子、癸亥、甲寅。日干癸水在子月（冬季水旺），地支又有亥子两个水，此命格属于什么类型？</h3>
-                    <div class="options">
-                        <label><input type="radio" name="q8" value="A"> A. 身弱需帮扶</label>
-                        <label><input type="radio" name="q8" value="B"> B. 身旺需克泄</label>
-                        <label><input type="radio" name="q8" value="C"> C. 从弱格</label>
-                        <label><input type="radio" name="q8" value="D"> D. 化气格</label>
-                    </div>
-                </div>
-
-                <!-- Question 9 (True/False) -->
-                <div class="question">
-                    <h3>9. 在合盘分析中，两人年柱天克地冲（如甲子遇庚午）通常被认为是非常不利的配对关系。</h3>
-                    <div class="options">
-                        <label><input type="radio" name="q9" value="true"> 正确</label>
-                        <label><input type="radio" name="q9" value="false"> 错误</label>
-                    </div>
-                </div>
-
-                <!-- Question 10 (True/False) -->
-                <div class="question">
-                    <h3>10. 地支六合中，子丑合化土、寅亥合化木，所有的六合都会发生化气现象。</h3>
-                    <div class="options">
-                        <label><input type="radio" name="q10" value="true"> 正确</label>
-                        <label><input type="radio" name="q10" value="false"> 错误</label>
-                    </div>
-                </div>
-            </form>
-
-            <div id="results" class="results" style="display: none;">
-                <h2>测验结果</h2>
-                <p id="score"></p>
-                <div id="feedback"></div>
+            <div id="quiz-results" style="display: none;">
+                <!-- Results will be rendered here by QuizEngine -->
             </div>
 
             <div class="button-group">
-                <button type="button" id="submitBtn" class="btn btn-primary">提交答案</button>
-                <button type="button" id="resetBtn" class="btn btn-secondary">重新测验</button>
-                <button type="button" id="nextBtn" class="btn btn-success" style="display: none;">完成课程</button>
+                <button class="btn btn-primary" onclick="QuizEngine.submit()">提交答案</button>
+                <button class="btn btn-secondary" onclick="QuizEngine.reset()">重新作答</button>
+                <a href="completion.html" class="btn btn-success">完成课程</a>
             </div>
         </main>
     </div>
 
     <script>
-        // Quiz configuration
-        const quizConfig = {
-            passingScore: 70,
-            questions: [
-                {
-                    id: 'q1',
-                    correctAnswer: 'B',
-                    explanation: '午（南方火）与子（北方水）是正对的关系，属于六冲中的子午冲，也称为"水火相冲"。'
-                },
-                {
-                    id: 'q2',
-                    correctAnswer: 'C',
-                    explanation: '寅午戌三个地支组合形成三合火局。寅为火的长生，午为火的帝旺，戌为火的墓库，三者合而化火。'
-                },
-                {
-                    id: 'q3',
-                    correctAnswer: 'B',
-                    explanation: '辛金日干生于卯月（仲春木旺之时），木克金，且命中木多，辛金受克严重，此命格属于身弱，需要金土来扶助。'
-                },
-                {
-                    id: 'q4',
-                    correctAnswer: 'A',
-                    explanation: '庚金与乙木属于天干五合，庚乙合化金。在合盘中，日柱天干五合通常被视为有缘分的配对。'
-                },
-                {
-                    id: 'q5',
-                    correctAnswer: 'A',
-                    explanation: '子、卯、午、酉分别位于正北、正东、正南、正西四个方位，称为"四正位"，这四个地支也称为"桃花位"或"四败地"，故称"四正桃花"格局。'
-                },
-                {
-                    id: 'q6',
-                    correctAnswer: 'D',
-                    explanation: '此命木旺且多火（丁、丙、午），形成木火通明之象。但木过旺需要疏通，最好用火来泄木气，使木气流通，同时火也能调节寒暖，使命格平衡。'
-                },
-                {
-                    id: 'q7',
-                    correctAnswer: 'C',
-                    explanation: '寅巳申三刑称为"持势之刑"或"无恩之刑"。这三个地支循环相刑，代表互相制约而又互相依存的关系。'
-                },
-                {
-                    id: 'q8',
-                    correctAnswer: 'B',
-                    explanation: '癸水日干生于子月（水旺之时），地支有亥子两个水，天干还有壬水帮身，整体水势很旺，属于身旺格局，需要木来泄秀（水生木）或土来制约（土克水）。'
-                },
-                {
-                    id: 'q9',
-                    correctAnswer: 'true',
-                    explanation: '正确。年柱代表祖上和早年，天克地冲表示两人的根基、家庭背景、成长环境等方面存在很大冲突，通常被认为婚配不利。'
-                },
-                {
-                    id: 'q10',
-                    correctAnswer: 'false',
-                    explanation: '错误。地支六合中并非所有组合都会化气。化气需要特定条件，如得令、有强根等。一般情况下，六合只是表示两个地支关系亲密、互相吸引，不一定发生化气。'
-                }
-            ],
-            scormConfig: {
-                lessonLocation: 'quiz06',
-                lessonStatus: 'incomplete',
-                completionPage: 'completion.html'
+        // Quiz questions array
+        const quizQuestions = [
+            {
+                question: "某人四柱为：年柱甲子、月柱丙寅、日柱戊午、时柱壬戌。请问日柱地支午与年柱地支子之间是什么关系？",
+                options: ["六合", "相冲", "相刑", "三合"],
+                correct: 1,
+                explanation: '午（南方火）与子（北方水）是正对的关系，属于六冲中的子午冲，也称为"水火相冲"。'
+            },
+            {
+                question: "在上述四柱中（甲子、丙寅、戊午、壬戌），寅午戌三个地支组合在一起形成什么局？",
+                options: ["三合水局", "三合木局", "三合火局", "三合金局"],
+                correct: 2,
+                explanation: "寅午戌三个地支组合形成三合火局。寅为火的长生，午为火的帝旺，戌为火的墓库，三者合而化火。"
+            },
+            {
+                question: "某女命四柱：年柱乙丑、月柱己卯、日柱辛未、时柱癸巳。日干辛金在卯月（木旺之时），此命格属于什么状态？",
+                options: ["身旺", "身弱", "从格", "化格"],
+                correct: 1,
+                explanation: "辛金日干生于卯月（仲春木旺之时），木克金，且命中木多，辛金受克严重，此命格属于身弱，需要金土来扶助。"
+            },
+            {
+                question: "合盘分析中，男命日柱为庚申，女命日柱为乙酉。两人日柱天干庚乙之间存在什么关系？",
+                options: ["天干五合（金）", "天干相冲", "天干相克", "天干相生"],
+                correct: 0,
+                explanation: "庚金与乙木属于天干五合，庚乙合化金。在合盘中，日柱天干五合通常被视为有缘分的配对。"
+            },
+            {
+                question: "某命四柱中出现：子、卯、午、酉四个地支。这四个地支组合形成什么格局？",
+                options: ["四正桃花", "四库全", "四生地", "四败地"],
+                correct: 0,
+                explanation: '子、卯、午、酉分别位于正北、正东、正南、正西四个方位，称为"四正位"，这四个地支也称为"桃花位"或"四败地"，故称"四正桃花"格局。'
+            },
+            {
+                question: "实际命例分析：某男命四柱为丁卯、壬寅、甲午、丙寅。此命中寅木出现三次，日干甲木在寅月，木势很旺。此命最需要什么五行来调候？",
+                options: ["金（克木）", "土（泄木）", "水（生木）", "火（木生火，泄木气）"],
+                correct: 3,
+                explanation: "此命木旺且多火（丁、丙、午），形成木火通明之象。但木过旺需要疏通，最好用火来泄木气，使木气流通，同时火也能调节寒暖，使命格平衡。"
+            },
+            {
+                question: "地支三刑中，寅巳申三刑又称为什么？",
+                options: ["无恩之刑", "无礼之刑", "持势之刑", "自刑"],
+                correct: 2,
+                explanation: '寅巳申三刑称为"持势之刑"或"无恩之刑"。这三个地支循环相刑，代表互相制约而又互相依存的关系。'
+            },
+            {
+                question: "某命四柱：庚辰、戊子、癸亥、甲寅。日干癸水在子月（冬季水旺），地支又有亥子两个水，此命格属于什么类型？",
+                options: ["身弱需帮扶", "身旺需克泄", "从弱格", "化气格"],
+                correct: 1,
+                explanation: "癸水日干生于子月（水旺之时），地支有亥子两个水，天干还有壬水帮身，整体水势很旺，属于身旺格局，需要木来泄秀（水生木）或土来制约（土克水）。"
+            },
+            {
+                question: "在合盘分析中，两人年柱天克地冲（如甲子遇庚午）通常被认为是非常不利的配对关系。",
+                options: ["正确", "错误"],
+                correct: 0,
+                explanation: "正确。年柱代表祖上和早年，天克地冲表示两人的根基、家庭背景、成长环境等方面存在很大冲突，通常被认为婚配不利。"
+            },
+            {
+                question: "地支六合中，子丑合化土、寅亥合化木，所有的六合都会发生化气现象。",
+                options: ["正确", "错误"],
+                correct: 1,
+                explanation: "错误。地支六合中并非所有组合都会化气。化气需要特定条件，如得令、有强根等。一般情况下，六合只是表示两个地支关系亲密、互相吸引，不一定发生化气。"
             }
-        };
+        ];
 
-        // Initialize quiz engine
-        let quizEngine;
-
+        // Initialize QuizEngine when page loads
         document.addEventListener('DOMContentLoaded', function() {
             // Initialize SCORM
-            initSCORM();
-            
-            // Create quiz engine instance
-            quizEngine = new QuizEngine('quizForm', quizConfig);
+            if (typeof scormAPI !== 'undefined') {
+                scormAPI.initialize();
+                scormAPI.setLessonLocation('quiz06');
+            }
 
-            // Button event listeners
-            document.getElementById('submitBtn').addEventListener('click', function() {
-                quizEngine.submitQuiz();
-            });
-
-            document.getElementById('resetBtn').addEventListener('click', function() {
-                quizEngine.resetQuiz();
-            });
-
-            document.getElementById('nextBtn').addEventListener('click', function() {
-                window.location.href = quizConfig.scormConfig.completionPage;
-            });
-
-            // Set SCORM lesson location
-            setSCORMValue('cmi.core.lesson_location', quizConfig.scormConfig.lessonLocation);
-            setSCORMValue('cmi.core.lesson_status', 'incomplete');
+            // Initialize Quiz
+            QuizEngine.init(quizQuestions);
         });
 
         // Handle page unload
         window.addEventListener('beforeunload', function() {
-            if (quizEngine && quizEngine.isCompleted) {
-                setSCORMValue('cmi.core.lesson_status', 'completed');
+            if (typeof scormAPI !== 'undefined') {
+                scormAPI.terminate();
             }
-            commitSCORM();
         });
     </script>
 </body>

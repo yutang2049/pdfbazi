@@ -15,211 +15,104 @@
         </header>
 
         <main>
-            <form id="quizForm">
-                <!-- Question 1 -->
-                <div class="question">
-                    <p class="question-text">1. 天干相冲中，"甲"与哪个天干相冲？</p>
-                    <div class="options">
-                        <label><input type="radio" name="q1" value="A"> A. 乙</label>
-                        <label><input type="radio" name="q1" value="B"> B. 庚</label>
-                        <label><input type="radio" name="q1" value="C"> C. 壬</label>
-                        <label><input type="radio" name="q1" value="D"> D. 己</label>
-                    </div>
-                </div>
+            <div id="quiz-container">
+                <!-- Quiz questions will be rendered here by QuizEngine -->
+            </div>
 
-                <!-- Question 2 -->
-                <div class="question">
-                    <p class="question-text">2. 天干合化中，"甲己合化"成什么？</p>
-                    <div class="options">
-                        <label><input type="radio" name="q2" value="A"> A. 金</label>
-                        <label><input type="radio" name="q2" value="B"> B. 木</label>
-                        <label><input type="radio" name="q2" value="C"> C. 土</label>
-                        <label><input type="radio" name="q2" value="D"> D. 水</label>
-                    </div>
-                </div>
-
-                <!-- Question 3 -->
-                <div class="question">
-                    <p class="question-text">3. "乙庚合化"成什么五行？</p>
-                    <div class="options">
-                        <label><input type="radio" name="q3" value="A"> A. 火</label>
-                        <label><input type="radio" name="q3" value="B"> B. 水</label>
-                        <label><input type="radio" name="q3" value="C"> C. 金</label>
-                        <label><input type="radio" name="q3" value="D"> D. 土</label>
-                    </div>
-                </div>
-
-                <!-- Question 4 -->
-                <div class="question">
-                    <p class="question-text">4. 天干"丙壬相冲"的主要原因是什么？</p>
-                    <div class="options">
-                        <label><input type="radio" name="q4" value="A"> A. 方位对冲</label>
-                        <label><input type="radio" name="q4" value="B"> B. 五行相克</label>
-                        <label><input type="radio" name="q4" value="C"> C. 阴阳不和</label>
-                        <label><input type="radio" name="q4" value="D"> D. 数字对冲</label>
-                    </div>
-                </div>
-
-                <!-- Question 5 -->
-                <div class="question">
-                    <p class="question-text">5. "丁壬合化"成什么五行？</p>
-                    <div class="options">
-                        <label><input type="radio" name="q5" value="A"> A. 土</label>
-                        <label><input type="radio" name="q5" value="B"> B. 金</label>
-                        <label><input type="radio" name="q5" value="C"> C. 水</label>
-                        <label><input type="radio" name="q5" value="D"> D. 木</label>
-                    </div>
-                </div>
-
-                <!-- Question 6 -->
-                <div class="question">
-                    <p class="question-text">6. 天干合化成功的最重要条件是什么？</p>
-                    <div class="options">
-                        <label><input type="radio" name="q6" value="A"> A. 两个天干必须相邻</label>
-                        <label><input type="radio" name="q6" value="B"> B. 必须得到月令的旺气支持</label>
-                        <label><input type="radio" name="q6" value="C"> C. 两个天干必须阴阳相同</label>
-                        <label><input type="radio" name="q6" value="D"> D. 必须在年柱出现</label>
-                    </div>
-                </div>
-
-                <!-- Question 7 -->
-                <div class="question">
-                    <p class="question-text">7. 天干冲克对命局的主要影响是？</p>
-                    <div class="options">
-                        <label><input type="radio" name="q7" value="A"> A. 增强五行力量</label>
-                        <label><input type="radio" name="q7" value="B"> B. 造成动荡、变化或损伤</label>
-                        <label><input type="radio" name="q7" value="C"> C. 促进合化成功</label>
-                        <label><input type="radio" name="q7" value="D"> D. 没有明显影响</label>
-                    </div>
-                </div>
-
-                <!-- Question 8 -->
-                <div class="question">
-                    <p class="question-text">8. "戊癸合化"成什么五行？</p>
-                    <div class="options">
-                        <label><input type="radio" name="q8" value="A"> A. 木</label>
-                        <label><input type="radio" name="q8" value="B"> B. 火</label>
-                        <label><input type="radio" name="q8" value="C"> C. 土</label>
-                        <label><input type="radio" name="q8" value="D"> D. 金</label>
-                    </div>
-                </div>
-
-                <!-- Question 9 (True/False) -->
-                <div class="question">
-                    <p class="question-text">9. 天干相合即使没有月令支持，也一定能合化成功。</p>
-                    <div class="options">
-                        <label><input type="radio" name="q9" value="true"> 正确</label>
-                        <label><input type="radio" name="q9" value="false"> 错误</label>
-                    </div>
-                </div>
-
-                <!-- Question 10 (True/False) -->
-                <div class="question">
-                    <p class="question-text">10. 天干相冲会削弱被冲天干的力量，造成命局的不稳定。</p>
-                    <div class="options">
-                        <label><input type="radio" name="q10" value="true"> 正确</label>
-                        <label><input type="radio" name="q10" value="false"> 错误</label>
-                    </div>
-                </div>
-            </form>
-
-            <div id="results" class="results"></div>
+            <div id="quiz-results" style="display: none;">
+                <!-- Results will be rendered here by QuizEngine -->
+            </div>
 
             <div class="button-group">
-                <button id="submitBtn" class="btn btn-primary">提交答案</button>
-                <button id="resetBtn" class="btn btn-secondary">重新测验</button>
-                <button id="nextBtn" class="btn btn-success" style="display:none;">下一章节</button>
+                <button class="btn btn-primary" onclick="QuizEngine.submit()">提交答案</button>
+                <button class="btn btn-secondary" onclick="QuizEngine.reset()">重新作答</button>
+                <a href="module05.html" class="btn btn-success">下一章</a>
             </div>
         </main>
     </div>
 
     <script>
-        // Quiz answers
-        const answers = {
-            q1: 'B',
-            q2: 'C',
-            q3: 'C',
-            q4: 'B',
-            q5: 'D',
-            q6: 'B',
-            q7: 'B',
-            q8: 'B',
-            q9: 'false',
-            q10: 'true'
-        };
+        // Quiz questions array
+        const quizQuestions = [
+            {
+                question: '天干相冲中，"甲"与哪个天干相冲？',
+                options: ["乙", "庚", "壬", "己"],
+                correct: 1,
+                explanation: "甲木与庚金相冲，属于五行相克（金克木）的关系。"
+            },
+            {
+                question: '天干合化中，"甲己合化"成什么？',
+                options: ["金", "木", "土", "水"],
+                correct: 2,
+                explanation: "甲己合化土。甲为阳木，己为阴土，合化为土。"
+            },
+            {
+                question: '"乙庚合化"成什么五行？',
+                options: ["火", "水", "金", "土"],
+                correct: 2,
+                explanation: "乙庚合化金。乙为阴木，庚为阳金，合化为金。"
+            },
+            {
+                question: '天干"丙壬相冲"的主要原因是什么？',
+                options: ["方位对冲", "五行相克", "阴阳不和", "数字对冲"],
+                correct: 1,
+                explanation: "丙火与壬水相冲，是因为水克火的五行相克关系。"
+            },
+            {
+                question: '"丁壬合化"成什么五行？',
+                options: ["土", "金", "水", "木"],
+                correct: 3,
+                explanation: "丁壬合化木。丁为阴火，壬为阳水，合化为木。"
+            },
+            {
+                question: "天干合化成功的最重要条件是什么？",
+                options: ["两个天干必须相邻", "必须得到月令的旺气支持", "两个天干必须阴阳相同", "必须在年柱出现"],
+                correct: 1,
+                explanation: "天干合化成功需要得到月令的旺气支持，否则只是相合而不能真正化气。"
+            },
+            {
+                question: "天干冲克对命局的主要影响是？",
+                options: ["增强五行力量", "造成动荡、变化或损伤", "促进合化成功", "没有明显影响"],
+                correct: 1,
+                explanation: "天干相冲会造成命局的动荡、变化或损伤，代表不稳定因素。"
+            },
+            {
+                question: '"戊癸合化"成什么五行？',
+                options: ["木", "火", "土", "金"],
+                correct: 1,
+                explanation: "戊癸合化火。戊为阳土，癸为阴水，合化为火。"
+            },
+            {
+                question: "天干相合即使没有月令支持，也一定能合化成功。",
+                options: ["正确", "错误"],
+                correct: 1,
+                explanation: "错误。天干相合需要月令支持才能合化成功，否则只是相合的关系，不会发生化气。"
+            },
+            {
+                question: "天干相冲会削弱被冲天干的力量，造成命局的不稳定。",
+                options: ["正确", "错误"],
+                correct: 0,
+                explanation: "正确。天干相冲会削弱被冲天干的力量，导致命局出现不稳定因素。"
+            }
+        ];
 
-        // Initialize quiz engine
-        const quiz = new QuizEngine('quiz04', answers);
-
-        // Submit button handler
-        document.getElementById('submitBtn').addEventListener('click', function() {
-            const form = document.getElementById('quizForm');
-            const userAnswers = {};
-            
-            // Collect user answers
-            for (let key in answers) {
-                const selected = form.querySelector(`input[name="${key}"]:checked`);
-                if (selected) {
-                    userAnswers[key] = selected.value;
-                }
+        // Initialize QuizEngine when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize SCORM
+            if (typeof scormAPI !== 'undefined') {
+                scormAPI.initialize();
+                scormAPI.setLessonLocation('quiz04');
             }
 
-            // Grade the quiz
-            const result = quiz.grade(userAnswers);
-            
-            // Display results
-            const resultsDiv = document.getElementById('results');
-            resultsDiv.innerHTML = `
-                <h2>测验结果</h2>
-                <p class="score">得分: ${result.score}/${result.total} (${result.percentage}%)</p>
-                <p class="status ${result.passed ? 'pass' : 'fail'}">
-                    ${result.passed ? '✓ 通过测验！' : '✗ 未通过，请重新学习后再次测验。'}
-                </p>
-            `;
-            resultsDiv.style.display = 'block';
-
-            // Show/hide buttons based on result
-            if (result.passed) {
-                document.getElementById('nextBtn').style.display = 'inline-block';
-            }
-
-            // Disable form
-            const inputs = form.querySelectorAll('input');
-            inputs.forEach(input => input.disabled = true);
-            this.disabled = true;
+            // Initialize Quiz
+            QuizEngine.init(quizQuestions);
         });
 
-        // Reset button handler
-        document.getElementById('resetBtn').addEventListener('click', function() {
-            const form = document.getElementById('quizForm');
-            form.reset();
-            
-            // Enable form
-            const inputs = form.querySelectorAll('input');
-            inputs.forEach(input => input.disabled = false);
-            
-            // Hide results and next button
-            document.getElementById('results').style.display = 'none';
-            document.getElementById('nextBtn').style.display = 'none';
-            document.getElementById('submitBtn').disabled = false;
-
-            // Reset quiz tracking
-            quiz.reset();
-        });
-
-        // Next button handler
-        document.getElementById('nextBtn').addEventListener('click', function() {
-            window.location.href = 'module05.html';
-        });
-
-        // Initialize SCORM on page load
-        window.addEventListener('load', function() {
-            quiz.initialize();
-        });
-
-        // Complete SCORM session on page unload
+        // Handle page unload
         window.addEventListener('beforeunload', function() {
-            quiz.terminate();
+            if (typeof scormAPI !== 'undefined') {
+                scormAPI.terminate();
+            }
         });
     </script>
 </body>

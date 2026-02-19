@@ -26,9 +26,9 @@
             </div>
 
             <div class="button-group">
-                <button id="submit-btn" class="btn btn-primary" onclick="QuizEngine.submit()">提交答案</button>
-                <button id="reset-btn" class="btn btn-secondary" onclick="QuizEngine.reset()" style="display: none;">重新作答</button>
-                <a href="module03.html" id="next-btn" class="btn btn-success" style="display: none;">下一章</a>
+                <button class="btn btn-primary" onclick="QuizEngine.submit()">提交答案</button>
+                <button class="btn btn-secondary" onclick="QuizEngine.reset()">重新作答</button>
+                <a href="module03.html" class="btn btn-success">下一章</a>
             </div>
         </main>
     </div>
@@ -38,118 +38,108 @@
         const quizQuestions = [
             {
                 question: '天干中的"甲、乙"属于什么五行？',
-                type: "single",
                 options: [
                     "金",
                     "木",
                     "水",
                     "火"
                 ],
-                correctAnswer: 1,
+                correct: 1,
                 explanation: "甲、乙属于木。甲为阳木，乙为阴木。在五行中，天干按照甲乙木、丙丁火、戊己土、庚辛金、壬癸水的顺序排列。"
             },
             {
                 question: '天干中的"庚、辛"对应的方位是什么？',
-                type: "single",
                 options: [
                     "东方",
                     "南方",
                     "西方",
                     "北方"
                 ],
-                correctAnswer: 2,
+                correct: 2,
                 explanation: "庚、辛属金，对应西方。五行方位为：木（甲乙）东方，火（丙丁）南方，金（庚辛）西方，水（壬癸）北方，土（戊己）中央。"
             },
             {
                 question: '地支中的"寅、卯、辰"属于哪个季节？',
-                type: "single",
                 options: [
                     "春季",
                     "夏季",
                     "秋季",
                     "冬季"
                 ],
-                correctAnswer: 0,
+                correct: 0,
                 explanation: "寅、卯、辰属于春季。地支按季节分为：春季寅卯辰，夏季巳午未，秋季申酉戌，冬季亥子丑。"
             },
             {
                 question: '地支中的"巳、午、未"属于哪个季节？',
-                type: "single",
                 options: [
                     "春季",
                     "夏季",
                     "秋季",
                     "冬季"
                 ],
-                correctAnswer: 1,
+                correct: 1,
                 explanation: "巳、午、未属于夏季。其中午为夏季正中，巳为初夏，未为夏末。夏至时太阳到达最北端。"
             },
             {
                 question: '四季中的"辰、未、戌、丑"分别代表什么？',
-                type: "single",
                 options: [
                     "四季的开始",
                     "四季的中点",
                     "四季的结束（四季土）",
                     "四季的交替点"
                 ],
-                correctAnswer: 2,
+                correct: 2,
                 explanation: '辰、未、戌、丑分别代表春、夏、秋、冬四季的最后一个月，称为"四季土"。辰为春季土，未为夏季土，戌为秋季土，丑为冬季土。'
             },
             {
                 question: "春分对应的是地支中的哪个位置？",
-                type: "single",
                 options: [
                     "寅月",
                     "卯月",
                     "辰月",
                     "巳月"
                 ],
-                correctAnswer: 1,
+                correct: 1,
                 explanation: "春分对应卯月。春分是春季的正中点，太阳直射赤道，昼夜平分。卯对应正东方位，是春季的中心。"
             },
             {
                 question: "夏至对应的地支是什么？",
-                type: "single",
                 options: [
                     "巳",
                     "午",
                     "未",
                     "申"
                 ],
-                correctAnswer: 1,
+                correct: 1,
                 explanation: "夏至对应午。夏至是夏季的正中点，太阳到达北回归线，是一年中白昼最长的一天。午对应正南方位。"
             },
             {
                 question: "秋分和冬至分别对应的地支是什么？",
-                type: "single",
                 options: [
                     "申和亥",
                     "酉和子",
                     "戌和丑",
                     "未和辰"
                 ],
-                correctAnswer: 1,
+                correct: 1,
                 explanation: "秋分对应酉，冬至对应子。秋分时昼夜平分，酉对应正西方位；冬至时白昼最短，子对应正北方位，太阳到达南回归线。"
             },
             {
                 question: '天干中的"丙、丁"属于阳干。',
-                type: "truefalse",
                 options: [
                     "正确",
                     "错误"
                 ],
-                correctAnswer: 1,
+                correct: 1,
                 explanation: "错误。丙为阳干，但丁为阴干。天干按奇偶分阴阳：甲、丙、戊、庚、壬为阳干（奇数位），乙、丁、己、辛、癸为阴干（偶数位）。"
             },
             {
                 question: '地支中的"子、午、卯、酉"分别对应四个正方位（正北、正南、正东、正西）。',
-                type: "truefalse",
                 options: [
                     "正确",
                     "错误"
                 ],
-                correctAnswer: 0,
+                correct: 0,
                 explanation: '正确。子对应正北（冬至），午对应正南（夏至），卯对应正东（春分），酉对应正西（秋分）。这四个地支称为"四正"，分别是四季的中心点。'
             }
         ];
@@ -157,67 +147,19 @@
         // Initialize QuizEngine when page loads
         document.addEventListener('DOMContentLoaded', function() {
             // Initialize SCORM
-            if (typeof ScormAPI !== 'undefined') {
-                ScormAPI.initialize();
-                ScormAPI.setLessonLocation('quiz02');
+            if (typeof scormAPI !== 'undefined') {
+                scormAPI.initialize();
+                scormAPI.setLessonLocation('quiz02');
             }
 
             // Initialize Quiz
-            if (typeof QuizEngine !== 'undefined') {
-                QuizEngine.init('quiz-container', quizQuestions, {
-                    onComplete: function(score, total) {
-                        // Show results
-                        document.getElementById('quiz-results').style.display = 'block';
-                        document.getElementById('quiz-container').style.display = 'none';
-                        
-                        // Update buttons
-                        document.getElementById('submit-btn').style.display = 'none';
-                        document.getElementById('reset-btn').style.display = 'inline-block';
-                        document.getElementById('next-btn').style.display = 'inline-block';
-                        
-                        // Calculate percentage
-                        const percentage = Math.round((score / total) * 100);
-                        
-                        // Display score
-                        const scoreDisplay = document.getElementById('score-display');
-                        scoreDisplay.innerHTML = `
-                            <p class="score-text">您的得分：<strong>${score}</strong> / ${total}</p>
-                            <p class="percentage-text">正确率：<strong>${percentage}%</strong></p>
-                            <p class="pass-status ${percentage >= 60 ? 'pass' : 'fail'}">
-                                ${percentage >= 60 ? '✓ 通过测验' : '✗ 未通过测验（需要60%以上）'}
-                            </p>
-                        `;
-                        
-                        // Track score in SCORM
-                        if (typeof ScormAPI !== 'undefined') {
-                            ScormAPI.setScore(score, total);
-                            if (percentage >= 60) {
-                                ScormAPI.setStatus('completed');
-                                ScormAPI.setSuccessStatus('passed');
-                            } else {
-                                ScormAPI.setStatus('completed');
-                                ScormAPI.setSuccessStatus('failed');
-                            }
-                        }
-                    },
-                    onReset: function() {
-                        // Hide results
-                        document.getElementById('quiz-results').style.display = 'none';
-                        document.getElementById('quiz-container').style.display = 'block';
-                        
-                        // Update buttons
-                        document.getElementById('submit-btn').style.display = 'inline-block';
-                        document.getElementById('reset-btn').style.display = 'none';
-                        document.getElementById('next-btn').style.display = 'none';
-                    }
-                });
-            }
+            QuizEngine.init(quizQuestions);
         });
 
         // Handle page unload
         window.addEventListener('beforeunload', function() {
-            if (typeof ScormAPI !== 'undefined') {
-                ScormAPI.terminate();
+            if (typeof scormAPI !== 'undefined') {
+                scormAPI.terminate();
             }
         });
     </script>
