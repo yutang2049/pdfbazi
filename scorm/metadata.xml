@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+    <general>
+        <identifier>
+            <catalog>URI</catalog>
+            <entry>com.pdfbazi.bazicourse.v1</entry>
+        </identifier>
+        <title>
+            <string language="zh-CN">四柱八字命理学完整课程</string>
+        </title>
+        <language>zh-CN</language>
+        <description>
+            <string language="zh-CN">
+                本课程系统讲解中国传统四柱八字命理学知识体系，涵盖天干地支基础、阴阳五行理论、
+                干支冲合会刑、命理推算方法等内容。通过6个核心章节的学习和配套测验，
+                帮助学员建立完整的命理学知识框架，掌握八字分析的基本方法。
+            </string>
+        </description>
+        <keyword>
+            <string language="zh-CN">四柱八字</string>
+        </keyword>
+        <keyword>
+            <string language="zh-CN">命理学</string>
+        </keyword>
+        <keyword>
+            <string language="zh-CN">天干地支</string>
+        </keyword>
+        <keyword>
+            <string language="zh-CN">阴阳五行</string>
+        </keyword>
+        <keyword>
+            <string language="zh-CN">中国传统文化</string>
+        </keyword>
+        <structure>
+            <source>LOMv1.0</source>
+            <value>hierarchical</value>
+        </structure>
+        <aggregationLevel>
+            <source>LOMv1.0</source>
+            <value>2</value>
+        </aggregationLevel>
+    </general>
+    
+    <lifeCycle>
+        <version>
+            <string language="zh-CN">1.0</string>
+        </version>
+        <status>
+            <source>LOMv1.0</source>
+            <value>final</value>
+        </status>
+        <contribute>
+            <role>
+                <source>LOMv1.0</source>
+                <value>author</value>
+            </role>
+            <entity>yutang2049</entity>
+            <date>
+                <dateTime>2026-02-19</dateTime>
+            </date>
+        </contribute>
+    </lifeCycle>
+    
+    <metaMetadata>
+        <identifier>
+            <catalog>URI</catalog>
+            <entry>com.pdfbazi.bazicourse.metadata.v1</entry>
+        </identifier>
+        <metadataSchema>LOMv1.0</metadataSchema>
+        <metadataSchema>SCORM_2004_3RD_EDITION</metadataSchema>
+        <language>zh-CN</language>
+    </metaMetadata>
+    
+    <technical>
+        <format>text/html</format>
+        <format>text/css</format>
+        <format>application/javascript</format>
+        <size>5000000</size>
+        <location>index.html</location>
+        <requirement>
+            <orComposite>
+                <type>
+                    <source>LOMv1.0</source>
+                    <value>browser</value>
+                </type>
+                <name>
+                    <source>LOMv1.0</source>
+                    <value>any</value>
+                </name>
+                <minimumVersion>HTML5</minimumVersion>
+            </orComposite>
+        </requirement>
+    </technical>
+    
+    <educational>
+        <interactivityType>
+            <source>LOMv1.0</source>
+            <value>mixed</value>
+        </interactivityType>
+        <learningResourceType>
+            <source>LOMv1.0</source>
+            <value>lecture</value>
+        </learningResourceType>
+        <learningResourceType>
+            <source>LOMv1.0</source>
+            <value>exercise</value>
+        </learningResourceType>
+        <interactivityLevel>
+            <source>LOMv1.0</source>
+            <value>high</value>
+        </interactivityLevel>
+        <semanticDensity>
+            <source>LOMv1.0</source>
+            <value>medium</value>
+        </semanticDensity>
+        <intendedEndUserRole>
+            <source>LOMv1.0</source>
+            <value>learner</value>
+        </intendedEndUserRole>
+        <context>
+            <source>LOMv1.0</source>
+            <value>higher education</value>
+        </context>
+        <context>
+            <source>LOMv1.0</source>
+            <value>training</value>
+        </context>
+        <typicalAgeRange>
+            <string language="zh-CN">18+</string>
+        </typicalAgeRange>
+        <difficulty>
+            <source>LOMv1.0</source>
+            <value>medium</value>
+        </difficulty>
+        <typicalLearningTime>
+            <duration>PT8H</duration>
+        </typicalLearningTime>
+        <description>
+            <string language="zh-CN">
+                课程采用理论讲解与案例分析相结合的方式，每章配有详细例题和测验题目，
+                帮助学员逐步掌握四柱八字的分析方法。
+            </string>
+        </description>
+        <language>zh-CN</language>
+    </educational>
+    
+    <rights>
+        <cost>
+            <source>LOMv1.0</source>
+            <value>no</value>
+        </cost>
+        <copyrightAndOtherRestrictions>
+            <source>LOMv1.0</source>
+            <value>yes</value>
+        </copyrightAndOtherRestrictions>
+        <description>
+            <string language="zh-CN">
+                版权所有 © 2026 pdfbazi。保留所有权利。
+                未经授权不得复制、传播或用于商业用途。
+            </string>
+        </description>
+    </rights>
+    
+    <classification>
+        <purpose>
+            <source>LOMv1.0</source>
+            <value>educational objective</value>
+        </purpose>
+        <taxonPath>
+            <source>
+                <string language="zh-CN">中国传统文化</string>
+            </source>
+            <taxon>
+                <id>01</id>
+                <entry>
+                    <string language="zh-CN">命理学</string>
+                </entry>
+            </taxon>
+            <taxon>
+                <id>01.01</id>
+                <entry>
+                    <string language="zh-CN">四柱八字</string>
+                </entry>
+            </taxon>
+        </taxonPath>
+        <description>
+            <string language="zh-CN">
+                本课程属于中国传统文化中的命理学范畴，专注于四柱八字理论体系的系统教学。
+            </string>
+        </description>
+    </classification>
+</lom>

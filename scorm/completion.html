@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课程完成 - 四柱八字命理学</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/scorm_api.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎉 恭喜完成课程</h1>
+            <p>四柱八字命理学完整课程</p>
+        </div>
+        
+        <div class="main-content">
+            <div class="completion-box">
+                <div class="completion-icon">🏆</div>
+                <h1>恭喜您成功完成本课程！</h1>
+                <p style="font-size: 1.2em; margin: 20px 0;">
+                    您已经系统学习了四柱八字命理学的核心知识，掌握了天干地支、阴阳五行、
+                    干支冲合会刑等重要理论，具备了基本的八字分析能力。
+                </p>
+                
+                <div class="completion-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">6</div>
+                        <div class="stat-label">完成章节</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">30+</div>
+                        <div class="stat-label">学习例题</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">60</div>
+                        <div class="stat-label">测验题目</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="total-score">-</div>
+                        <div class="stat-label">综合成绩</div>
+                    </div>
+                </div>
+            </div>
+            
+            <section class="learning-objectives">
+                <h2>您已掌握的核心知识</h2>
+                <ul>
+                    <li>天干地支的基本概念和六十甲子体系</li>
+                    <li>天干地支的方位、季节和五行属性</li>
+                    <li>阴阳五行的基本理论和相生相克关系</li>
+                    <li>天干的冲克合化规律及应用</li>
+                    <li>地支的冲合会刑害关系及判断方法</li>
+                    <li>四柱八字的综合分析和合盘技巧</li>
+                </ul>
+            </section>
+            
+            <section class="chapter-summary">
+                <h2>继续学习建议</h2>
+                <p>
+                    完成本课程只是命理学习的开始，建议您：
+                </p>
+                <ul style="list-style-type: disc; padding-left: 40px;">
+                    <li>定期复习所学内容，巩固基础知识</li>
+                    <li>多收集真实八字案例进行分析练习</li>
+                    <li>深入学习大运、流年、神煞等进阶内容</li>
+                    <li>阅读经典命理著作，如《渊海子平》《滴天髓》等</li>
+                    <li>保持谦逊态度，命理学博大精深，需要不断学习</li>
+                    <li>理性看待命理，用于自我认知和人生指导，而非迷信</li>
+                </ul>
+            </section>
+            
+            <section class="content-section">
+                <h2>课程证书</h2>
+                <div class="decorative-border text-center">
+                    <p style="font-size: 1.3em; margin: 20px 0;">
+                        <strong>课程完成证明</strong>
+                    </p>
+                    <p style="margin: 15px 0;">
+                        兹证明学员已成功完成<br>
+                        <span class="highlight">《四柱八字命理学完整课程》</span>
+                    </p>
+                    <p style="margin: 15px 0;">
+                        完成日期：<span id="completion-date"></span>
+                    </p>
+                    <p style="margin: 15px 0; color: #8B1A1A; font-size: 1.1em;">
+                        学习时长：约8小时 | 课程章节：6章 | 测验题目：60题
+                    </p>
+                </div>
+            </section>
+            
+            <section class="content-section">
+                <h2>感谢与寄语</h2>
+                <p>
+                    感谢您选择本课程学习四柱八字命理学。中国传统命理文化源远流长，
+                    蕴含着古人对宇宙、人生的深刻洞察。希望您能够通过本课程的学习，
+                    不仅掌握命理分析的基本方法，更能够理解其中蕴含的哲学智慧。
+                </p>
+                <p>
+                    命理学的学习是一个循序渐进的过程，需要理论与实践相结合。
+                    希望您能够将所学知识应用于实际生活，用于了解自我、认识他人，
+                    在人生道路上作出更明智的选择。
+                </p>
+                <p style="text-align: center; font-size: 1.2em; color: #8B1A1A; margin: 30px 0; font-weight: bold;">
+                    祝您学有所成，前程似锦！
+                </p>
+            </section>
+            
+            <div class="btn-group">
+                <a href="index.html" class="btn btn-primary">返回首页</a>
+                <button onclick="window.print()" class="btn btn-secondary">打印证书</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 设置完成日期
+        document.addEventListener('DOMContentLoaded', function() {
+            var today = new Date();
+            var dateStr = today.getFullYear() + '年' + 
+                         (today.getMonth() + 1) + '月' + 
+                         today.getDate() + '日';
+            document.getElementById('completion-date').textContent = dateStr;
+            
+            // 尝试从SCORM获取总分
+            if (typeof scormAPI !== 'undefined') {
+                try {
+                    var rawScore = scormAPI.getValue('cmi.score.raw');
+                    if (rawScore && rawScore !== '') {
+                        document.getElementById('total-score').textContent = rawScore + '分';
+                    } else {
+                        document.getElementById('total-score').textContent = '优秀';
+                    }
+                } catch(e) {
+                    document.getElementById('total-score').textContent = '优秀';
+                }
+            } else {
+                document.getElementById('total-score').textContent = '优秀';
+            }
+        });
+        
+        // 页面加载完成后上报SCORM完成状态
+        window.addEventListener('load', function() {
+            if (typeof scormAPI !== 'undefined') {
+                // 设置课程完成
+                scormAPI.setCompleted();
+                
+                // 设置为通过
+                scormAPI.setPassed();
+                
+                // 如果没有分数，设置满分
+                var currentScore = scormAPI.getValue('cmi.score.raw');
+                if (!currentScore || currentScore === '') {
+                    scormAPI.setScore(100, 0, 100);
+                }
+                
+                // 设置当前位置
+                scormAPI.setValue('cmi.location', 'completion');
+                
+                // 设置退出状态
+                scormAPI.setValue('cmi.exit', 'normal');
+                
+                // 提交数据
+                scormAPI.commit();
+                
+                console.log('课程完成状态已上报到LMS');
+            }
+        });
+    </script>
+</body>
+</html>
