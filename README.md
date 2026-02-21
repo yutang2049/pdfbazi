@@ -2,6 +2,26 @@
 
 本仓库提供完整的四柱八字命理学 SCORM 2004 在线课程包，包含 6 个核心章节、60 道测验题目和详细的学习资料。
 
+---
+
+## 📥 **直接下载课程**
+
+### 🎯 一键下载（推荐）
+
+| 下载方式 | 链接 | 说明 |
+|---------|------|------|
+| **方式 1** | [📦 下载仓库 ZIP](https://github.com/yutang2049/pdfbazi/archive/refs/heads/copilot/generate-scorm-course-package.zip) | 点击立即下载，解压后使用 `scorm/` 目录 |
+| **方式 2** | [📋 查看所有下载方式](DOWNLOAD_LINKS.md) | 包含 Release、Git 克隆等多种方式 |
+| **方式 3** | [⚡ 快速开始指南](QUICKSTART.md) | 一页式快速参考 |
+
+**下载后**：
+- 📚 **上传到 LMS**：直接上传 ZIP 到 Moodle/Blackboard/Canvas
+- 💻 **本地学习**：解压后运行 `python3 -m http.server 8000`，访问 http://localhost:8000/scorm/index.html
+
+**文件大小**：约 3MB（完整仓库）｜ 340KB（仅课程文件）
+
+---
+
 ## 🚀 快速开始
 
 ### 方法一：一键打包下载（推荐）
@@ -34,11 +54,13 @@ git sparse-checkout set scorm
 
 ## 📥 详细下载指南
 
-查看 **[DOWNLOAD.md](DOWNLOAD.md)** 获取完整的下载和使用说明，包括：
-- 多种下载方法
-- LMS 系统上传指南
-- 本地预览方法
-- 常见问题解答
+**🔗 直接下载链接**: [DOWNLOAD_LINKS.md](DOWNLOAD_LINKS.md) ← **点击这里查看所有下载方式**
+
+查看以下文档获取完整说明：
+- **[DOWNLOAD_LINKS.md](DOWNLOAD_LINKS.md)** - 直接下载链接和快速访问
+- **[DOWNLOAD.md](DOWNLOAD.md)** - 详细下载指南和使用说明
+- **[QUICKSTART.md](QUICKSTART.md)** - 快速开始一页式参考
+- **[COMPARISON.md](COMPARISON.md)** - 下载方法对比表
 
 ## 📁 目录结构
 
@@ -192,6 +214,27 @@ npx http-server -p 8000        # Node.js 方式
 
 ---
 
-**开始学习**：[查看下载指南](DOWNLOAD.md) | [查看课程文档](scorm/README.md)
+## 🔗 快速链接
+
+| 文档 | 说明 |
+|------|------|
+| **[📥 直接下载链接](DOWNLOAD_LINKS.md)** | **⭐ 点击这里立即下载课程** |
+| [📖 下载指南](DOWNLOAD.md) | 详细的下载和使用说明 |
+| [⚡ 快速开始](QUICKSTART.md) | 一页式快速参考 |
+| [📊 方法对比](COMPARISON.md) | 选择最适合您的下载方式 |
+| [📚 课程文档](scorm/README.md) | SCORM 课程包详细说明 |
+
+---
+
+<div align="center">
+
+### 📥 **立即开始下载和学习**
+
+**[点击这里查看所有下载方式 →](DOWNLOAD_LINKS.md)**
+
+---
 
 祝学习顺利！ 🎉
+
+</div>
+
