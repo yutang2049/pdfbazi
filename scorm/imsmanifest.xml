@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="com.pdfbazi.bazicourse.v1" version="1.0"
+    xmlns="http://www.imsglobal.org/xsd/imscp_v1p1"
+    xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3"
+    xmlns:adlseq="http://www.adlnet.org/xsd/adlseq_v1p3"
+    xmlns:adlnav="http://www.adlnet.org/xsd/adlnav_v1p3"
+    xmlns:imsss="http://www.imsglobal.org/xsd/imsss"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd
+                        http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd
+                        http://www.adlnet.org/xsd/adlseq_v1p3 adlseq_v1p3.xsd
+                        http://www.adlnet.org/xsd/adlnav_v1p3 adlnav_v1p3.xsd
+                        http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd">
+    
+    <metadata>
+        <schema>ADL SCORM</schema>
+        <schemaversion>2004 3rd Edition</schemaversion>
+        <lom xmlns="http://ltsc.ieee.org/xsd/LOM">
+            <general>
+                <title>
+                    <string language="zh-CN">四柱八字命理学完整课程</string>
+                </title>
+                <description>
+                    <string language="zh-CN">深入学习中国传统四柱八字命理学，掌握天干地支、阴阳五行、命理推算等核心知识。</string>
+                </description>
+                <keyword>
+                    <string language="zh-CN">四柱八字</string>
+                </keyword>
+                <keyword>
+                    <string language="zh-CN">命理学</string>
+                </keyword>
+                <keyword>
+                    <string language="zh-CN">天干地支</string>
+                </keyword>
+                <keyword>
+                    <string language="zh-CN">阴阳五行</string>
+                </keyword>
+                <language>zh-CN</language>
+            </general>
+            <lifeCycle>
+                <version>
+                    <string language="zh-CN">1.0</string>
+                </version>
+            </lifeCycle>
+            <educational>
+                <learningResourceType>
+                    <value>course</value>
+                </learningResourceType>
+                <intendedEndUserRole>
+                    <value>learner</value>
+                </intendedEndUserRole>
+                <context>
+                    <value>higher education</value>
+                </context>
+                <difficulty>
+                    <value>medium</value>
+                </difficulty>
+                <typicalLearningTime>
+                    <duration>PT8H</duration>
+                </typicalLearningTime>
+            </educational>
+        </lom>
+    </metadata>
+    
+    <organizations default="org-bazi-course">
+        <organization identifier="org-bazi-course">
+            <title>四柱八字命理学完整课程</title>
+            
+            <!-- 课程首页 -->
+            <item identifier="item-index" identifierref="resource-index">
+                <title>课程首页</title>
+            </item>
+            
+            <!-- 第一章：干支基础知识 -->
+            <item identifier="item-module01" identifierref="resource-module01">
+                <title>第一章：干支基础知识</title>
+                <adlcp:completionThreshold>
+                    <adlcp:minProgressMeasure>1.0</adlcp:minProgressMeasure>
+                </adlcp:completionThreshold>
+                <adlcp:timeLimitAction>continue,no message</adlcp:timeLimitAction>
+            </item>
+            
+            <item identifier="item-quiz01" identifierref="resource-quiz01">
+                <title>第一章测验</title>
+                <adlcp:completionThreshold>
+                    <adlcp:minProgressMeasure>1.0</adlcp:minProgressMeasure>
+                </adlcp:completionThreshold>
+                <adlcp:timeLimitAction>continue,no message</adlcp:timeLimitAction>
+            </item>
+            
+            <!-- 第二章：干支季节方位 -->
+            <item identifier="item-module02" identifierref="resource-module02">
+                <title>第二章：干支季节方位</title>
+                <adlcp:completionThreshold>
+                    <adlcp:minProgressMeasure>1.0</adlcp:minProgressMeasure>
+                </adlcp:completionThreshold>
+                <adlcp:timeLimitAction>continue,no message</adlcp:timeLimitAction>
+            </item>
+            
+            <item identifier="item-quiz02" identifierref="resource-quiz02">
+                <title>第二章测验</title>
+                <adlcp:completionThreshold>
+                    <adlcp:minProgressMeasure>1.0</adlcp:minProgressMeasure>
+                </adlcp:completionThreshold>
+                <adlcp:timeLimitAction>continue,no message</adlcp:timeLimitAction>
+            </item>
+            
+            <!-- 第三章：阴阳五行通识 -->
+            <item identifier="item-module03" identifierref="resource-module03">
+                <title>第三章：阴阳五行通识</title>
+                <adlcp:completionThreshold>
+                    <adlcp:minProgressMeasure>1.0</adlcp:minProgressMeasure>
+                </adlcp:completionThreshold>
+                <adlcp:timeLimitAction>continue,no message</adlcp:timeLimitAction>
+            </item>
+            
+            <item identifier="item-quiz03" identifierref="resource-quiz03">
+                <title>第三章测验</title>
+                <adlcp:completionThreshold>
+                    <adlcp:minProgressMeasure>1.0</adlcp:minProgressMeasure>
+                </adlcp:completionThreshold>
+                <adlcp:timeLimitAction>continue,no message</adlcp:timeLimitAction>
+            </item>
+            
+            <!-- 第四章：五行相生相克 -->
+            <item identifier="item-module04" identifierref="resource-module04">
+                <title>第四章：五行相生相克</title>
+                <adlcp:completionThreshold>
+                    <adlcp:minProgressMeasure>1.0</adlcp:minProgressMeasure>
+                </adlcp:completionThreshold>
+                <adlcp:timeLimitAction>continue,no message</adlcp:timeLimitAction>
+            </item>
+            
+            <item identifier="item-quiz04" identifierref="resource-quiz04">
+                <title>第四章测验</title>
+                <adlcp:completionThreshold>
+                    <adlcp:minProgressMeasure>1.0</adlcp:minProgressMeasure>
+                </adlcp:completionThreshold>
+                <adlcp:timeLimitAction>continue,no message</adlcp:timeLimitAction>
+            </item>
+            
+            <!-- 第五章：地支合会刑冲克害 -->
+            <item identifier="item-module05" identifierref="resource-module05">
+                <title>第五章：地支合会刑冲克害</title>
+                <adlcp:completionThreshold>
+                    <adlcp:minProgressMeasure>1.0</adlcp:minProgressMeasure>
+                </adlcp:completionThreshold>
+                <adlcp:timeLimitAction>continue,no message</adlcp:timeLimitAction>
+            </item>
+            
+            <item identifier="item-quiz05" identifierref="resource-quiz05">
+                <title>第五章测验</title>
+                <adlcp:completionThreshold>
+                    <adlcp:minProgressMeasure>1.0</adlcp:minProgressMeasure>
+                </adlcp:completionThreshold>
+                <adlcp:timeLimitAction>continue,no message</adlcp:timeLimitAction>
+            </item>
+            
+            <!-- 第六章：合盘简析 -->
+            <item identifier="item-module06" identifierref="resource-module06">
+                <title>第六章：合盘简析</title>
+                <adlcp:completionThreshold>
+                    <adlcp:minProgressMeasure>1.0</adlcp:minProgressMeasure>
+                </adlcp:completionThreshold>
+                <adlcp:timeLimitAction>continue,no message</adlcp:timeLimitAction>
+            </item>
+            
+            <item identifier="item-quiz06" identifierref="resource-quiz06">
+                <title>综合案例测验</title>
+                <adlcp:completionThreshold>
+                    <adlcp:minProgressMeasure>1.0</adlcp:minProgressMeasure>
+                </adlcp:completionThreshold>
+                <adlcp:timeLimitAction>continue,no message</adlcp:timeLimitAction>
+            </item>
+            
+            <!-- 课程完成 -->
+            <item identifier="item-completion" identifierref="resource-completion">
+                <title>课程完成</title>
+            </item>
+        </organization>
+    </organizations>
+    
+    <resources>
+        <!-- 课程首页 -->
+        <resource identifier="resource-index" type="webcontent" adlcp:scormType="sco" href="index.html">
+            <file href="index.html"/>
+            <file href="css/style.css"/>
+            <file href="js/scorm_api.js"/>
+        </resource>
+        
+        <!-- 模块资源 -->
+        <resource identifier="resource-module01" type="webcontent" adlcp:scormType="sco" href="module01.html">
+            <file href="module01.html"/>
+            <file href="css/style.css"/>
+            <file href="js/scorm_api.js"/>
+        </resource>
+        
+        <resource identifier="resource-module02" type="webcontent" adlcp:scormType="sco" href="module02.html">
+            <file href="module02.html"/>
+            <file href="css/style.css"/>
+            <file href="js/scorm_api.js"/>
+        </resource>
+        
+        <resource identifier="resource-module03" type="webcontent" adlcp:scormType="sco" href="module03.html">
+            <file href="module03.html"/>
+            <file href="css/style.css"/>
+            <file href="js/scorm_api.js"/>
+        </resource>
+        
+        <resource identifier="resource-module04" type="webcontent" adlcp:scormType="sco" href="module04.html">
+            <file href="module04.html"/>
+            <file href="css/style.css"/>
+            <file href="js/scorm_api.js"/>
+        </resource>
+        
+        <resource identifier="resource-module05" type="webcontent" adlcp:scormType="sco" href="module05.html">
+            <file href="module05.html"/>
+            <file href="css/style.css"/>
+            <file href="js/scorm_api.js"/>
+        </resource>
+        
+        <resource identifier="resource-module06" type="webcontent" adlcp:scormType="sco" href="module06.html">
+            <file href="module06.html"/>
+            <file href="css/style.css"/>
+            <file href="js/scorm_api.js"/>
+        </resource>
+        
+        <!-- 测验资源 -->
+        <resource identifier="resource-quiz01" type="webcontent" adlcp:scormType="sco" href="quiz01.html">
+            <file href="quiz01.html"/>
+            <file href="css/style.css"/>
+            <file href="js/scorm_api.js"/>
+            <file href="js/quiz.js"/>
+        </resource>
+        
+        <resource identifier="resource-quiz02" type="webcontent" adlcp:scormType="sco" href="quiz02.html">
+            <file href="quiz02.html"/>
+            <file href="css/style.css"/>
+            <file href="js/scorm_api.js"/>
+            <file href="js/quiz.js"/>
+        </resource>
+        
+        <resource identifier="resource-quiz03" type="webcontent" adlcp:scormType="sco" href="quiz03.html">
+            <file href="quiz03.html"/>
+            <file href="css/style.css"/>
+            <file href="js/scorm_api.js"/>
+            <file href="js/quiz.js"/>
+        </resource>
+        
+        <resource identifier="resource-quiz04" type="webcontent" adlcp:scormType="sco" href="quiz04.html">
+            <file href="quiz04.html"/>
+            <file href="css/style.css"/>
+            <file href="js/scorm_api.js"/>
+            <file href="js/quiz.js"/>
+        </resource>
+        
+        <resource identifier="resource-quiz05" type="webcontent" adlcp:scormType="sco" href="quiz05.html">
+            <file href="quiz05.html"/>
+            <file href="css/style.css"/>
+            <file href="js/scorm_api.js"/>
+            <file href="js/quiz.js"/>
+        </resource>
+        
+        <resource identifier="resource-quiz06" type="webcontent" adlcp:scormType="sco" href="quiz06.html">
+            <file href="quiz06.html"/>
+            <file href="css/style.css"/>
+            <file href="js/scorm_api.js"/>
+            <file href="js/quiz.js"/>
+        </resource>
+        
+        <!-- 完成页面 -->
+        <resource identifier="resource-completion" type="webcontent" adlcp:scormType="sco" href="completion.html">
+            <file href="completion.html"/>
+            <file href="css/style.css"/>
+            <file href="js/scorm_api.js"/>
+        </resource>
+    </resources>
+</manifest>

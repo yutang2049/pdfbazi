@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第三章测验：阴阳五行通识</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/scorm_api.js"></script>
+    <script src="js/quiz.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>第三章测验：阴阳五行通识</h1>
+        </header>
+
+        <main>
+            <div id="quiz-container">
+                <!-- Quiz questions will be rendered here by QuizEngine -->
+            </div>
+
+            <div id="quiz-results" style="display: none;">
+                <!-- Results will be rendered here by QuizEngine -->
+            </div>
+
+            <div class="button-group">
+                <button class="btn btn-primary" onclick="QuizEngine.submit()">提交答案</button>
+                <button class="btn btn-secondary" onclick="QuizEngine.reset()">重新作答</button>
+                <a href="module04.html" class="btn btn-success">下一章</a>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Quiz questions array
+        const quizQuestions = [
+            {
+                question: "阴阳的根本特征是什么？",
+                options: ["对立统一", "独立存在", "互不相干", "永恒不变"],
+                correct: 0,
+                explanation: "阴阳的根本特征是对立统一，既相互对立又相互依存，相互转化。"
+            },
+            {
+                question: '五行中，"水"生什么？',
+                options: ["火", "木", "土", "金"],
+                correct: 1,
+                explanation: "五行相生：水生木、木生火、火生土、土生金、金生水。"
+            },
+            {
+                question: '五行相克关系中，"火"克什么？',
+                options: ["水", "木", "金", "土"],
+                correct: 2,
+                explanation: "五行相克：火克金、金克木、木克土、土克水、水克火。"
+            },
+            {
+                question: '"木"在五行中代表的方位是？',
+                options: ["南方", "北方", "东方", "西方"],
+                correct: 2,
+                explanation: "五行方位：木东、火南、金西、水北、土中央。"
+            },
+            {
+                question: '"金"在五行中的季节属性是？',
+                options: ["春季", "夏季", "秋季", "冬季"],
+                correct: 2,
+                explanation: "五行季节：木对应春季，火对应夏季，金对应秋季，水对应冬季，土对应四季之末。"
+            },
+            {
+                question: "阴阳共存的典型例子是？",
+                options: ["白天和黑夜同时存在", "太极图中阴中有阳、阳中有阴", "男性和女性完全对立", "冷热互不相容"],
+                correct: 1,
+                explanation: "太极图中阴中有阳、阳中有阴，完美展现了阴阳共存、相互依存的关系。"
+            },
+            {
+                question: "在中医理论中，五行生克关系主要用于？",
+                options: ["诊断疾病和调理脏腑", "预测天气变化", "计算年龄", "确定方位"],
+                correct: 0,
+                explanation: "中医运用五行生克关系诊断疾病、调理脏腑，如肝属木、心属火、脾属土、肺属金、肾属水。"
+            },
+            {
+                question: '"土"在五行中对应的脏腑是？',
+                options: ["心", "肝", "脾", "肺"],
+                correct: 2,
+                explanation: "五行与脏腑对应：木-肝、火-心、土-脾、金-肺、水-肾。"
+            },
+            {
+                question: "阴阳是完全对立、互不转化的。",
+                options: ["正确", "错误"],
+                correct: 1,
+                explanation: "错误。阴阳不仅对立统一，还可以相互转化，如寒极生热、热极生寒。"
+            },
+            {
+                question: "五行相生的顺序是：木生火、火生土、土生金、金生水、水生木。",
+                options: ["正确", "错误"],
+                correct: 0,
+                explanation: "正确。这就是五行相生的完整循环顺序。"
+            }
+        ];
+
+        // Initialize QuizEngine when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize SCORM
+            if (typeof scormAPI !== 'undefined') {
+                scormAPI.initialize();
+                scormAPI.setValue('cmi.location', 'quiz03');
+            }
+
+            // Initialize Quiz
+            QuizEngine.init(quizQuestions);
+        });
+
+        // Handle page unload
+        window.addEventListener('beforeunload', function() {
+            if (typeof scormAPI !== 'undefined') {
+                scormAPI.terminate();
+            }
+        });
+    </script>
+</body>
+</html>

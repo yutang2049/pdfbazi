@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第一章测验：干支基础知识</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/scorm_api.js"></script>
+    <script src="js/quiz.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>第一章测验：干支基础知识</h1>
+        </header>
+
+        <main>
+            <div id="quiz-container">
+                <!-- Quiz questions will be rendered here by QuizEngine -->
+            </div>
+
+            <div id="quiz-results" style="display: none;">
+                <h2>测验结果</h2>
+                <div id="score-display"></div>
+                <div id="feedback-list"></div>
+            </div>
+
+            <div class="button-group">
+                <button class="btn btn-primary" onclick="QuizEngine.submit()">提交答案</button>
+                <button class="btn btn-secondary" onclick="QuizEngine.reset()">重新作答</button>
+                <a href="module02.html" class="btn btn-success">下一章</a>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Quiz questions array
+        const quizQuestions = [
+            {
+                question: "天干共有多少个？",
+                options: [
+                    "8个",
+                    "10个",
+                    "12个",
+                    "60个"
+                ],
+                correct: 1,
+                explanation: "天干共有10个，分别是：甲、乙、丙、丁、戊、己、庚、辛、壬、癸。"
+            },
+            {
+                question: "地支共有多少个？",
+                options: [
+                    "8个",
+                    "10个",
+                    "12个",
+                    "24个"
+                ],
+                correct: 2,
+                explanation: "地支共有12个，分别是：子、丑、寅、卯、辰、巳、午、未、申、酉、戌、亥。"
+            },
+            {
+                question: "六十甲子是由什么组合而成的？",
+                options: [
+                    "天干与地支的组合",
+                    "阴阳五行的组合",
+                    "十二生肖的排列",
+                    "二十四节气的排列"
+                ],
+                correct: 0,
+                explanation: "六十甲子是由10个天干和12个地支按照固定规则组合而成，共有60种不同的组合。"
+            },
+            {
+                question: "天干地支组合时遵循什么规则？",
+                options: [
+                    "任意组合",
+                    "奇配偶、偶配奇",
+                    "奇配奇、偶配偶",
+                    "按照五行相生"
+                ],
+                correct: 2,
+                explanation: '天干地支组合时遵循"奇配奇、偶配偶"的规则。阳干配阳支，阴干配阴支。例如：甲（阳）配子（阳），乙（阴）配丑（阴）。'
+            },
+            {
+                question: '四柱八字中的"四柱"指的是什么？',
+                options: [
+                    "春夏秋冬四季",
+                    "年柱、月柱、日柱、时柱",
+                    "东南西北四方",
+                    "金木水火四行"
+                ],
+                correct: 1,
+                explanation: '四柱指的是年柱、月柱、日柱、时柱，分别代表一个人出生的年、月、日、时。每柱由一个天干和一个地支组成，共八个字，所以称为"八字"。'
+            },
+            {
+                question: "下列哪个是正确的天干地支组合？",
+                options: [
+                    "甲丑",
+                    "乙子",
+                    "丙寅",
+                    "丁卯"
+                ],
+                correct: 2,
+                explanation: "丙寅是正确的组合。丙为阳干（排序第3，奇数），寅为阳支（排序第3，奇数），符合奇配奇的规则。甲丑、乙子、丁卯都违反了奇偶配对规则。"
+            },
+            {
+                question: '"八字"中的"八"指的是什么？',
+                options: [
+                    "八卦",
+                    "八个方位",
+                    "八个天干地支字",
+                    "八种命格"
+                ],
+                correct: 2,
+                explanation: '"八字"是指四柱中的八个天干地支字：年柱的天干地支、月柱的天干地支、日柱的天干地支、时柱的天干地支，共计八个字。'
+            },
+            {
+                question: "六十甲子循环一周需要多少年？",
+                options: [
+                    "10年",
+                    "12年",
+                    "60年",
+                    "120年"
+                ],
+                correct: 2,
+                explanation: "六十甲子循环一周需要60年。因为天干10个、地支12个，它们的最小公倍数是60，所以每60年完成一个完整的循环。"
+            },
+            {
+                question: '天干中的"甲"属于阳干。',
+                options: [
+                    "正确",
+                    "错误"
+                ],
+                correct: 0,
+                explanation: "正确。天干按奇偶分阴阳，奇数位为阳干，偶数位为阴干。甲排在第一位（奇数），所以是阳干。阳干有：甲、丙、戊、庚、壬。"
+            },
+            {
+                question: '地支中的"子"和天干中的"乙"可以组合成"乙子"。',
+                options: [
+                    "正确",
+                    "错误"
+                ],
+                correct: 1,
+                explanation: '错误。子为阳支（排序第1，奇数），乙为阴干（排序第2，偶数），不符合"奇配奇、偶配偶"的规则，所以不能组合。正确的组合应该是甲子（阳干配阳支）或乙丑（阴干配阴支）。'
+            }
+        ];
+
+        // Initialize QuizEngine when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize SCORM
+            if (typeof scormAPI !== 'undefined') {
+                scormAPI.initialize();
+                scormAPI.setValue('cmi.location', 'quiz01');
+            }
+
+            // Initialize Quiz
+            QuizEngine.init(quizQuestions);
+        });
+
+        // Handle page unload
+        window.addEventListener('beforeunload', function() {
+            if (typeof scormAPI !== 'undefined') {
+                scormAPI.terminate();
+            }
+        });
+    </script>
+</body>
+</html>
